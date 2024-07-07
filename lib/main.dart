@@ -179,7 +179,7 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
                                 Expanded(
                                   child: AutoSizeText(
                                     textLaunch.text,
-                                    minFontSize: 25,
+                                    minFontSize: ResponsiveBreakpoints.of(context).isMobile ? 20 : 30,
                                     style: const TextStyle(color: Colors.white),
                                     textAlign: TextAlign.center,
                                     maxLines: 2,
