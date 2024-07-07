@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,26 +23,22 @@ class MyApp extends StatelessWidget {
         child: child!,
         breakpoints: [
           const Breakpoint(start: 0, end: 450, name: MOBILE),
-          const Breakpoint(start: 451, end: 900, name: TABLET),
-          const Breakpoint(start: 901, end: 1800, name: DESKTOP),
-          const Breakpoint(start: 1801, end: double.infinity, name: '4K'),
+          const Breakpoint(start: 451, end: double.infinity, name: DESKTOP),
         ],
       ),
       onGenerateRoute: (RouteSettings settings) {
         return MaterialPageRoute(
           builder: (context) {
             return MaxWidthBox(
-              maxWidth: 1800,
+              maxWidth: 2000,
               background: Container(color: Colors.transparent),
               child: ResponsiveScaledBox(
                 width: ResponsiveValue<double>(
                   context,
-                  defaultValue: 1800.0,
+                  defaultValue: 2000,
                   conditionalValues: [
-                    const Condition.equals(name: MOBILE, value: 1800.0),
-                    const Condition.equals(name: TABLET, value: 1800.0),
-                    const Condition.equals(name: DESKTOP, value: 1800.0),
-                    const Condition.equals(name: '4K', value: 1800),
+                    const Condition.equals(name: MOBILE, value: 450.0),
+                    const Condition.equals(name: DESKTOP, value: 2000),
                   ],
                 ).value,
                 child: const SimpleWebPage(),
@@ -76,7 +72,7 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
 
   List<TextLaunch> listElements = [
     TextLaunch(
-      url: "https://timur-harin.ru/assets/Flutter_resume_Timur_Harin.pdf",
+      url: "https://github.com/timur-harin/timur-harin.github.io/releases/download/resume/Flutter_resume_Timur_Harin_github.pdf",
       text: "Резюме",
     ),
     TextLaunch(
@@ -105,9 +101,11 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
     return Container(
       constraints: const BoxConstraints.expand(),
       decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/evening.jpeg"),
-              fit: BoxFit.cover)),
+        image: DecorationImage(
+          image: AssetImage("assets/images/evening.jpeg"),
+          fit: BoxFit.cover,
+        ),
+      ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
@@ -117,12 +115,12 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 const CircleAvatar(
-                  radius: 150,
+                  radius: 100,
                   backgroundImage: AssetImage("assets/images/me.jpeg"),
                 ),
                 const AutoSizeText(
                   "Timur Harin",
-                  minFontSize: 40,
+                  minFontSize: 30,
                   maxLines: 1,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -131,7 +129,7 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
                 ),
                 const AutoSizeText(
                   "@timur_harin",
-                  minFontSize: 40,
+                  minFontSize: 30,
                   maxLines: 1,
                   style: TextStyle(
                     color: Colors.black,
@@ -148,8 +146,8 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
                         child: Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: SizedBox(
-                            width: 70,
-                            height: 70,
+                            width: 60,
+                            height: 60,
                             child: Image.asset(
                               iconLaunch.image,
                               color: Colors.black,
@@ -172,7 +170,7 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
                             borderRadius: BorderRadius.circular(50),
                             color: Colors.black.withOpacity(0.75),
                           ),
-                          width: 1500,
+                          width: 1000,
                           margin: const EdgeInsets.all(10),
                           child: Padding(
                             padding: const EdgeInsets.all(15),
