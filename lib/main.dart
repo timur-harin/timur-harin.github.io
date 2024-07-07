@@ -120,7 +120,7 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
                 ),
                 const AutoSizeText(
                   "Timur Harin",
-                  minFontSize: 30,
+                  minFontSize: 40,
                   maxLines: 1,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
                 ),
                 const AutoSizeText(
                   "@timur_harin",
-                  minFontSize: 30,
+                  minFontSize: 40,
                   maxLines: 1,
                   style: TextStyle(
                     color: Colors.black,
@@ -179,7 +179,7 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
                                 Expanded(
                                   child: AutoSizeText(
                                     textLaunch.text,
-                                    minFontSize: ResponsiveBreakpoints.of(context).isMobile ? 20 : 30,
+                                    minFontSize: ResponsiveBreakpoints.of(context).isMobile ? 15 : 30,
                                     style: const TextStyle(color: Colors.white),
                                     textAlign: TextAlign.center,
                                     maxLines: 2,
