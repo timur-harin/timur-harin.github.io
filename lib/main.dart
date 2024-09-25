@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           builder: (context) {
             return MaxWidthBox(
               maxWidth: 2000,
-              background: Container(color: Colors.transparent),
+              backgroundColor: Colors.transparent,
               child: ResponsiveScaledBox(
                 width: ResponsiveValue<double>(
                   context,
@@ -72,7 +72,8 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
 
   List<TextLaunch> listElements = [
     TextLaunch(
-      url: "https://github.com/timur-harin/timur-harin.github.io/releases/download/resume/Autonomous_resume_Timur_Harin.pdf",
+      url:
+          "https://github.com/timur-harin/timur-harin.github.io/releases/download/resume/Autonomous_resume_Timur_Harin.pdf",
       text: "Резюме",
     ),
     TextLaunch(
@@ -179,7 +180,11 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
                                 Expanded(
                                   child: AutoSizeText(
                                     textLaunch.text,
-                                    minFontSize: ResponsiveBreakpoints.of(context).isMobile ? 15 : 30,
+                                    minFontSize:
+                                        ResponsiveBreakpoints.of(context)
+                                                .isMobile
+                                            ? 15
+                                            : 30,
                                     style: const TextStyle(color: Colors.white),
                                     textAlign: TextAlign.center,
                                     maxLines: 2,

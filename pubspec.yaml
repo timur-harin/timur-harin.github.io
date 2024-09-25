@@ -5,13 +5,13 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
+  sdk: '>=3.4.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
   url_launcher: ^6.1.11
-  flutter_launcher_icons: ^0.13.1
+  flutter_launcher_icons: ^0.14.1
   auto_size_text: ^3.0.0
   responsive_framework: ^1.4.0
 
