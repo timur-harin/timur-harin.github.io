@@ -72,7 +72,7 @@ class _SimpleWebPageState extends State<SimpleWebPage> {
 
   List<TextLaunch> listElements = [
     TextLaunch(
-      url: "https://github.com/timur-harin/timur-harin.github.io/releases/download/resume/Flutter_resume_Timur_Harin_github.pdf",
+      url: "https://github.com/timur-harin/timur-harin.github.io/releases/download/resume/Autonomous_resume_Timur_Harin.pdf",
       text: "Резюме",
     ),
     TextLaunch(
